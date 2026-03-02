@@ -118,10 +118,4 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-## 🤝 Contributing
-
-VYUHA is a formation of leads. We welcome contributions that improve agent logic, add new adapters, or enhance the governance protocol. Please see `CONTRIBUTING.md` for details (Coming Soon).
-
----
-
 **VYUHA: Precision in Formation.**
