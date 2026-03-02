@@ -1,0 +1,14 @@
+{
+    "name": "vyuha-cli",
+    "version": "0.1.0",
+    "description": "Elite high-governance multi-agent engine (Python wrapper)",
+    "main": "index.js",
+    "bin": {
+        "vyuha": "bin/vyuha"
+    },
+    "bin": {
+        "vyuha": "bin/vyuha"
+    },
+    "author": "Ankit Jha",
+    "license": "MIT"
+}

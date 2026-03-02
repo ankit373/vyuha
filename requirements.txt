@@ -1,0 +1,6 @@
+httpx
+typer
+rich
+python-dotenv
+PyYAML
+setuptools

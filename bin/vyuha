@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+const { spawn } = require('child_process');
+const path = require('path');
+
+// Execute the python binary from the local venv
+const venvPython = path.join(__dirname, '..', 'venv', 'bin', 'python3');
+const child = spawn(venvPython, ['-m', 'main', ...process.argv.slice(2)], {
+    stdio: 'inherit',
+    env: { ...process.env, PYTHONPATH: path.join(__dirname, '..') }
+});
+
+child.on('exit', (code) => {
+    process.exit(code);
+});

@@ -1,0 +1,210 @@
+{
+    "project": "VYUHA",
+    "version": "2.1.0",
+    "protocol": "A2A",
+    "governance_defaults": {
+        "mode": "CONSENSUS",
+        "timeout": 30
+    },
+    "flows": {
+        "software_build": [
+            {
+                "topic": "requirements/input",
+                "start_node": "Sutra"
+            },
+            {
+                "topic": "requirements/draft",
+                "next_node": "Sutradhara",
+                "is_action": true
+            },
+            {
+                "topic": "architecture/input",
+                "next_node": "Vishwakarma"
+            },
+            {
+                "topic": "code/generate",
+                "next_node": "Yantra",
+                "is_action": true
+            },
+            {
+                "topic": "verification/run",
+                "next_node": "Pariksha"
+            }
+        ],
+        "bug_fix": [
+            {
+                "topic": "bug/report",
+                "start_node": "Pariksha"
+            },
+            {
+                "topic": "debug/request",
+                "next_node": "Yantra",
+                "is_action": true
+            },
+            {
+                "topic": "fix/verify",
+                "next_node": "Pariksha"
+            }
+        ],
+        "documentation_update": [
+            {
+                "topic": "docs/request",
+                "start_node": "Lipi"
+            },
+            {
+                "topic": "docs/draft",
+                "next_node": "Sutradhara",
+                "is_action": true
+            }
+        ],
+        "data_pipeline_build": [
+            {
+                "topic": "data/requirements",
+                "start_node": "Ganaka"
+            },
+            {
+                "topic": "pipeline/draft",
+                "next_node": "Varuna",
+                "is_action": true
+            },
+            {
+                "topic": "ml/train",
+                "next_node": "Budhi",
+                "is_action": true
+            },
+            {
+                "topic": "ml/deploy",
+                "next_node": "Yantri",
+                "is_action": true
+            }
+        ]
+    },
+    "formation": {
+        "Core Dev Suite": {
+            "Sutra": {
+                "role": "Lead Requirements Engineer",
+                "reviewers": [
+                    "Sutradhara"
+                ],
+                "review_mode": "CONSENSUS"
+            },
+            "Dharma": {
+                "role": "Principal Standards Architect",
+                "reviewers": [
+                    "Kavacha"
+                ],
+                "review_mode": "SINGLE"
+            },
+            "Kavacha": {
+                "role": "Chief Security Auditor",
+                "reviewers": [
+                    "Dharma"
+                ],
+                "review_mode": "SINGLE"
+            },
+            "Akasha": {
+                "role": "Lead Connectivity Architect",
+                "reviewers": [
+                    "Vishwakarma"
+                ],
+                "review_mode": "SINGLE"
+            }
+        },
+        "Architect Suite": {
+            "Sutradhara": {
+                "role": "Principal Logic Architect",
+                "reviewers": [],
+                "review_mode": "AUTO"
+            },
+            "Vishwakarma": {
+                "role": "Senior Principal Architect",
+                "reviewers": [
+                    "Dharma"
+                ],
+                "review_mode": "CONSENSUS"
+            },
+            "Yantra": {
+                "role": "Lead Software Engineer",
+                "reviewers": [
+                    "Dharma",
+                    "Kavacha"
+                ],
+                "review_mode": "MAJORITY"
+            },
+            "Lipi": {
+                "role": "Senior Technical Scribe",
+                "reviewers": [
+                    "Sutradhara"
+                ],
+                "review_mode": "SINGLE"
+            }
+        },
+        "Project Ops Suite": {
+            "Chitra": {
+                "role": "Lead UI/UX Designer",
+                "reviewers": [
+                    "Dharma"
+                ],
+                "review_mode": "SINGLE"
+            },
+            "Pariksha": {
+                "role": "Lead QA Engineer",
+                "reviewers": [
+                    "Yantra",
+                    "Sutra"
+                ],
+                "review_mode": "CONSENSUS"
+            },
+            "Arjuna": {
+                "role": "Lead DevOps Engineer",
+                "reviewers": [
+                    "Kavacha",
+                    "Prithvi"
+                ],
+                "review_mode": "CONSENSUS"
+            },
+            "Prithvi": {
+                "role": "Lead Infrastructure Architect",
+                "reviewers": [
+                    "Kavacha",
+                    "Arjuna"
+                ],
+                "review_mode": "CONSENSUS"
+            }
+        },
+        "Data & ML Suite": {
+            "Varuna": {
+                "role": "Lead Database Administrator",
+                "reviewers": [
+                    "Kavacha",
+                    "Vishwakarma"
+                ],
+                "review_mode": "CONSENSUS"
+            },
+            "Ganaka": {
+                "role": "Lead Data Analyst",
+                "reviewers": [
+                    "Varuna",
+                    "Sutra"
+                ],
+                "review_mode": "SINGLE"
+            },
+            "Budhi": {
+                "role": "Principal ML Engineer",
+                "reviewers": [
+                    "Dharma",
+                    "Ganaka"
+                ],
+                "review_mode": "MAJORITY"
+            },
+            "Yantri": {
+                "role": "Lead MLOps Architect",
+                "reviewers": [
+                    "Budhi",
+                    "Arjuna"
+                ],
+                "review_mode": "CONSENSUS"
+            }
+        }
+    }
+}
